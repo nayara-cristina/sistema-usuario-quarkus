@@ -52,3 +52,5 @@ public class User extends PanacheEntityBase {
         return Objects.hash(id, name, age);
     }
 }
+
+
