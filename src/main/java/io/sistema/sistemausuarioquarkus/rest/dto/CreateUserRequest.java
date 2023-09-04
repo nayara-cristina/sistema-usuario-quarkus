@@ -2,21 +2,21 @@ package io.sistema.sistemausuarioquarkus.rest.dto;
 
 public class CreateUserRequest {
     private String name;
-    private Integer age;
+    private String email;
 
     public String getName() {
         return name;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

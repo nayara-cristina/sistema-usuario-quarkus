@@ -12,8 +12,8 @@ public class User extends PanacheEntityBase {
     private Long id;
     @Column(name = "name")
     private String name;
-    @Column(name = "age")
-    private Integer age;
+    @Column(name = "email")
+    private String email;
 
     public Long getId() {
         return id;
@@ -31,12 +31,12 @@ public class User extends PanacheEntityBase {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
@@ -44,11 +44,11 @@ public class User extends PanacheEntityBase {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(age, user.age);
+        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(email, user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, age);
+        return Objects.hash(id, name, email);
     }
 }
